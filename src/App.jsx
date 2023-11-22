@@ -1,6 +1,7 @@
 import  { useState, useEffect } from 'react';
 import Webcam from 'react-webcam';
 
+const ENVIRONMENT = import.meta.env.VITE_ENVIRONMENT
 const App = () => {
   const [cameras, setCameras] = useState([]);
   const [selectedCamera, setSelectedCamera] = useState(null);
@@ -31,7 +32,7 @@ const App = () => {
       flexDirection: 'column',
       alignItems: 'center'
     }}>
-      
+      {ENVIRONMENT}
       <Webcam
         audio={false}
         videoConstraints={{ deviceId: selectedCamera }}
