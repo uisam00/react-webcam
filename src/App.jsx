@@ -32,7 +32,7 @@ const App = () => {
       flexDirection: 'column',
       alignItems: 'center'
     }}>
-      {ENVIRONMENT}
+      <span>Env: {ENVIRONMENT}</span>
       <Webcam
         audio={false}
         videoConstraints={{ deviceId: selectedCamera }}
